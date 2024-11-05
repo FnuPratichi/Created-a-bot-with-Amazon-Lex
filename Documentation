@@ -1,0 +1,45 @@
+Steps done : 
+
+1. Creating the Bot with Amazon Lex
+ - Accessed the AWS Management Console and navigated to Amazon Lex.
+ - Created a new bot using the ScheduleAppointment blueprint.
+ - Set the language to English (US) and confirmed COPPA settings.
+
+2. Testing the Bot
+ - Utilized the built-in test window in Amazon Lex to simulate user interactions.
+ - Tested with various inputs, including appointment types and dates.
+
+3. Creating an AWS Lambda Function
+ - In the AWS Management Console, selected Lambda and created a function using the Make an appointment with Lex blueprint.
+ - Named the function MakeAppointmentCodeHook and assigned a new execution role.
+
+4. Testing the Lambda Function
+ - Created a test event named MyMakeAppointmentEvent and executed the function, confirming successful execution.
+
+5. Updating the Bot's Intent
+ - Updated the MakeAppointment intent to integrate the AWS Lambda function for initialization, validation, and fulfillment.
+
+6. Building and Testing the Bot
+ - Built the bot and confirmed a successful build.
+ - Published the bot with a unique alias for external access.
+
+7. Setting Up Amazon Cognito
+ - Created an Amazon Cognito identity pool to secure access to the bot.
+ - Enabled guest access and noted the IdentityPoolID.
+
+8. Modifying IAM Roles
+ - Configured IAM roles to grant the necessary permissions for Amazon Lex access.
+
+9. Creating an S3 Bucket
+ - Created an S3 bucket for hosting the static webpage.
+ - Uploaded index.html and error.html files to the bucket.
+
+10. Configuring the S3 Bucket for Static Website Hosting
+ - Enabled static website hosting in S3 and specified index.html as the index document.
+
+11. Updating HTML for Bot Integration
+ - Modified the index.html file to include the IdentityPoolID, botAlias, and botName.
+ - Ensured the HTML file is uploaded to the S3 bucket.
+
+12. Configuring Bucket Permissions
+ - Edited bucket policies to allow public read access for the hosted webpage.
